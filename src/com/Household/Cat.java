@@ -1,14 +1,25 @@
 package com.Household;
 
-public abstract class Cat implements Pet {
-    public abstract String makeSound();
-    public abstract String eat();
-    public abstract String name();
+
+    public class Cat extends PetBuilder {
+
+        public Cat(String name) {
+            super(name);
+        }
+        @Override
+        public String feed(){
+            return "I love cat food";
+        }
+        @Override
+        public String groom(){
+            return "Meow, I feel clean";
+        }
+        @Override
+        public String play(){
+            return "I dont play!";
+
+        }
 
 
-    // Constructor:
-    public Cat(String name) {
-        this.name = name;
     }
 
-}
